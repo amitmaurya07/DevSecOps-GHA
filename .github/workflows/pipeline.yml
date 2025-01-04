@@ -41,3 +41,6 @@ jobs:
                 tags: "amaurya07/devsecops_app:${{ github.ref_name }}"
                 cache-from: type=gha
                 cache-to: type=gha,mode=max
+            - name: Install Node.js dependencies (npm install)
+              run: npm ci
+              working-directory: ./
