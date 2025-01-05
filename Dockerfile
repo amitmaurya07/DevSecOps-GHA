@@ -8,6 +8,7 @@ EXPOSE 3000
 
 FROM node:20-alpine3.21
 WORKDIR /app
-COPY --from=base /app /app
+COPY --from=base /app/node_modules /app/node_modules
+COPY . /app/
 CMD ["npm","start"]
 
